@@ -14,7 +14,7 @@
 - (FREObject) toFREObject
 {
     FREObject result;
-    FRENewObject((const uint8_t*)"com.freshplanet.ane.AirFacebook.FBAccessToken", 0, NULL, &result, NULL);
+    FRENewObject((const uint8_t*)"com.freshplanet.ane.airFacebook.FBAccessToken", 0, NULL, &result, NULL);
     FRESetObjectProperty(result, (const uint8_t*)"appID", FPANE_NSStringToFREObject(self.appID), NULL);
     FRESetObjectProperty(result, (const uint8_t*)"declinedPermissions", FPANE_NSArrayToFREObject([self.declinedPermissions allObjects]), NULL);
     FRESetObjectProperty(result, (const uint8_t*)"expirationDate", FPANE_doubleToFREObject([self.expirationDate timeIntervalSince1970]), NULL);

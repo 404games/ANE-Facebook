@@ -103,8 +103,8 @@
 
         <exec executable="${flex.sdk}/bin/compc${bin.ext}" failonerror="true">
             <env key="AIR_SDK_HOME" value="${flex.sdk}"/>
-            <arg line='-swf-version=29'/>
-            <arg line='-target-player=18'/>
+            <arg line='-swf-version=28'/>
+            <arg line='-target-player=20'/>
             <arg line='-source-path ../actionscript/src'/>
             <arg line='-output temp/swc/${name}.swc'/>
             <arg line='-external-library-path+="${flex.sdk}/frameworks/libs/air/airglobal.swc"'/>

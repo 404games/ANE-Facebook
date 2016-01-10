@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.share {
+package com.freshplanet.ane.airFacebook.share {
 
 /**
  * Describes link content to be shared.

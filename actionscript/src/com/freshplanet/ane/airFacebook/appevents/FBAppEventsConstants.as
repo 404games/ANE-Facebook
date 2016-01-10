@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.appevents {
+package com.freshplanet.ane.airFacebook.appevents {
 
 /**
  * Predefined event and parameter names for logging events common to many apps.

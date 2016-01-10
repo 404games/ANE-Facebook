@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook {
+package com.freshplanet.ane.airFacebook {
 
 /**
  * Passed to the FBSDKLoginManager to indicate how Facebook Login should be attempted.

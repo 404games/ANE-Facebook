@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.appevents {
+package com.freshplanet.ane.airFacebook.appevents {
 
 /**
  * Event that can be logged by Facebook.

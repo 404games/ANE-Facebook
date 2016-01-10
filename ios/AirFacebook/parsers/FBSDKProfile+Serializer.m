@@ -14,7 +14,7 @@
 - (FREObject) toFREObject
 {
     FREObject result;
-    FRENewObject((const uint8_t*)"com.freshplanet.ane.AirFacebook.FBProfile", 0, NULL, &result, NULL);
+    FRENewObject((const uint8_t*)"com.freshplanet.ane.airFacebook.FBProfile", 0, NULL, &result, NULL);
     FRESetObjectProperty(result, (const uint8_t*)"firstName", FPANE_NSStringToFREObject(self.firstName), NULL);
     FRESetObjectProperty(result, (const uint8_t*)"lastName", FPANE_NSStringToFREObject(self.lastName), NULL);
     FRESetObjectProperty(result, (const uint8_t*)"linkUrl", FPANE_NSStringToFREObject([self.linkURL absoluteString]), NULL);

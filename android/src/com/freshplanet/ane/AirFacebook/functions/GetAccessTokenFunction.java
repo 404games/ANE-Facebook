@@ -17,7 +17,7 @@ public class GetAccessTokenFunction implements FREFunction
 		if(accessToken != null){
 
 			try {
-				FREObject result = FREObject.newObject("com.freshplanet.ane.AirFacebook.FBAccessToken", null);
+				FREObject result = FREObject.newObject("com.freshplanet.ane.airFacebook.FBAccessToken", null);
 				result.setProperty("appID", FREObject.newObject(accessToken.getApplicationId()));
 				result.setProperty("declinedPermissions", FREConversionUtil.fromStringSet(accessToken.getDeclinedPermissions()));
 				result.setProperty("expirationDate", FREObject.newObject((double) (accessToken.getExpires().getTime() / 1000)));

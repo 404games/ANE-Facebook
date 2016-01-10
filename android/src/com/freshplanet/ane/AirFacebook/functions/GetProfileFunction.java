@@ -16,7 +16,7 @@ public class GetProfileFunction implements FREFunction {
         if (profile != null){
             try {
 
-                FREObject result = FREObject.newObject("com.freshplanet.ane.AirFacebook.FBProfile", null);
+                FREObject result = FREObject.newObject("com.freshplanet.ane.airFacebook.FBProfile", null);
                 result.setProperty("firstName", FREObject.newObject(profile.getFirstName()));
                 result.setProperty("lastName", FREObject.newObject(profile.getLastName()));
                 result.setProperty("linkUrl", FREObject.newObject(profile.getLinkUri().toString()));

@@ -1,7 +1,7 @@
 /**
  * Created by nodrock on 26/08/15.
  */
-package com.freshplanet.ane.AirFacebook.share {
+package com.freshplanet.ane.airFacebook.share {
 public class FBShareOpenGraphAction extends ValueContainer {
 
     private static const ACTION_TYPE_KEY:String = "og:type";

@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook {
+package com.freshplanet.ane.airFacebook {
 
 /**
  * The mode for the share dialog.

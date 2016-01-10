@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook
+package com.freshplanet.ane.airFacebook
 {
 /**
  * This class represents a basic Facebook profile.

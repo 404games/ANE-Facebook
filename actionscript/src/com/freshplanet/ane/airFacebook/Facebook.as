@@ -1,9 +1,9 @@
-﻿package com.freshplanet.ane.AirFacebook {
-import com.freshplanet.ane.AirFacebook.appevents.FBEvent;
-import com.freshplanet.ane.AirFacebook.share.FBAppInviteContent;
-import com.freshplanet.ane.AirFacebook.share.FBGameRequestContent;
-import com.freshplanet.ane.AirFacebook.share.FBShareLinkContent;
-import com.freshplanet.ane.AirFacebook.share.FBShareOpenGraphContent;
+﻿package com.freshplanet.ane.airFacebook {
+import com.freshplanet.ane.airFacebook.appevents.FBEvent;
+import com.freshplanet.ane.airFacebook.share.FBAppInviteContent;
+import com.freshplanet.ane.airFacebook.share.FBGameRequestContent;
+import com.freshplanet.ane.airFacebook.share.FBShareLinkContent;
+import com.freshplanet.ane.airFacebook.share.FBShareOpenGraphContent;
 
 import flash.desktop.InvokeEventReason;
 
@@ -125,8 +125,8 @@ public class Facebook extends EventDispatcher {
      * @param shareDialogModeIOS
      * @param shareDialogModeAndroid
      *
-     * @see com.freshplanet.ane.AirFacebook.FBShareDialogModeIOS
-     * @see com.freshplanet.ane.AirFacebook.FBShareDialogModeAndroid
+     * @see com.freshplanet.ane.airFacebook.FBShareDialogModeIOS
+     * @see com.freshplanet.ane.airFacebook.FBShareDialogModeAndroid
      */
     public function setDefaultShareDialogMode(shareDialogModeIOS:FBShareDialogModeIOS = null,
                                               shareDialogModeAndroid:FBShareDialogModeAndroid = null):void
@@ -152,8 +152,8 @@ public class Facebook extends EventDispatcher {
      * @param loginBehaviorIOS
      * @param loginBehaviorAndroid
      *
-     * @see com.freshplanet.ane.AirFacebook.FBLoginBehaviorIOS
-     * @see com.freshplanet.ane.AirFacebook.FBLoginBehaviorAndroid
+     * @see com.freshplanet.ane.airFacebook.FBLoginBehaviorIOS
+     * @see com.freshplanet.ane.airFacebook.FBLoginBehaviorAndroid
      */
     public function setLoginBehavior(loginBehaviorIOS:FBLoginBehaviorIOS = null,
                                      loginBehaviorAndroid:FBLoginBehaviorAndroid = null):void
@@ -178,7 +178,7 @@ public class Facebook extends EventDispatcher {
      *
      * @param defaultAudience
      *
-     * @see com.freshplanet.ane.AirFacebook.FBDefaultAudience
+     * @see com.freshplanet.ane.airFacebook.FBDefaultAudience
      */
     public function setDefaultAudience(defaultAudience:FBDefaultAudience = null):void
     {
@@ -207,7 +207,7 @@ public class Facebook extends EventDispatcher {
     /**
      * The current Facebook access token, or null if no session is open.
      *
-     * @see com.freshplanet.ane.AirFacebook.FBAccessToken
+     * @see com.freshplanet.ane.airFacebook.FBAccessToken
      */
     public function get accessToken():FBAccessToken
     {
@@ -226,7 +226,7 @@ public class Facebook extends EventDispatcher {
     /**
      * Current Facebook profile, or null if no session is open.
      *
-     * @see com.freshplanet.ane.AirFacebook.FBProfile
+     * @see com.freshplanet.ane.airFacebook.FBProfile
      */
     public function get profile():FBProfile
     {
@@ -253,10 +253,13 @@ public class Facebook extends EventDispatcher {
      */
     public function logInWithReadPermissions(permissions:Array, callback:Function = null):void
     {
+        trace(11);
         if (_initialized) {
+          trace(12);
 
             logIn(permissions, "read", callback);
         } else {
+          trace(13);
 
             log("You must call init() before any other method!");
         }
@@ -452,12 +455,12 @@ public class Facebook extends EventDispatcher {
     /**
      * If <code>true</code>, logs will be displayed at the ActionScript level.
      */
-    public static var logEnabled:Boolean = false;
+    public static var logEnabled:Boolean = true;
     /**
      * If <code>true</code>, logs will be displayed at the native level.
      * You must change this before first call of getInstance() to actually see logs in native.
      */
-    public static var nativeLogEnabled:Boolean = false;
+    public static var nativeLogEnabled:Boolean = true;
 
     private var _context:ExtensionContext;
     private var _openSessionCallback:Function;
@@ -465,10 +468,13 @@ public class Facebook extends EventDispatcher {
 
     private function logIn(permissions:Array, type:String, callback:Function = null):void
     {
+        trace(1);
         if (!isSupported) return;
 
+        trace(2);
         _openSessionCallback = callback;
         if(permissions == null) permissions = [];
+        trace(3);
         _context.call('logInWithPermissions', permissions, type);
     }
 

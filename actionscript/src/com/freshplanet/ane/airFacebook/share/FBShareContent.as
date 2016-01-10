@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.share {
+package com.freshplanet.ane.airFacebook.share {
 
 /**
  * Provides the base class for content to be shared. Contains all common methods for the different types of content.

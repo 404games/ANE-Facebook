@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.share {
+package com.freshplanet.ane.airFacebook.share {
 
 /**
  * Describes the content that will be displayed by the AppInviteDialog.

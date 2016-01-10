@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook.share {
+package com.freshplanet.ane.airFacebook.share {
 
 /**
  * @see http://developers.facebook.com/docs/reference/android/current/class/GameRequestContent.ActionType/

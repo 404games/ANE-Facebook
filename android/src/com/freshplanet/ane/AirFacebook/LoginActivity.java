@@ -64,7 +64,7 @@ public class LoginActivity extends Activity
 
 					@Override
 					public void onError(FacebookException exception) {
-						AirFacebookExtension.log("OPEN_SESSION_ERROR " + exception.toString());
+						AirFacebookExtension.log("OPEN_SESSION_ERROR2 " + exception.toString());
 						exception.printStackTrace();
 						_context.dispatchStatusEventAsync("OPEN_SESSION_ERROR", exception.getMessage());
 						finish();
@@ -80,7 +80,7 @@ public class LoginActivity extends Activity
 		}
 		catch (Exception e)
 		{
-			AirFacebookExtension.log("OPEN_SESSION_ERROR " + e.toString());
+			AirFacebookExtension.log("OPEN_SESSION_ERROR1 " + e.toString());
 			e.printStackTrace();
 			_context.dispatchStatusEventAsync("OPEN_SESSION_ERROR", e.getMessage());
 			finish();

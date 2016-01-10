@@ -1,4 +1,4 @@
-package com.freshplanet.ane.AirFacebook {
+package com.freshplanet.ane.airFacebook {
 
 /**
  * Certain operations such as publishing a status or publishing a photo require an audience.
